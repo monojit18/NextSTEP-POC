@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",    
+    "parameters": {      
+      "certData": {
+          "reference": {
+              "keyVault": {                
+                  "id": "/subscriptions/e5d4143d-aa29-4479-8588-405f723c89f5/resourceGroups/AKSDev-rg/providers/Microsoft.KeyVault/vaults/nextstep-dev-kv"
+                },
+            "secretName": "nextstep-dev-appgw-cert-secret"
+        }
+      },
+      "certPassword": {
+          "reference": {
+              "keyVault": {
+                "id": "/subscriptions/e5d4143d-aa29-4479-8588-405f723c89f5/resourceGroups/AKSDev-rg/providers/Microsoft.KeyVault/vaults/nextstep-dev-kv"
+                },
+            "secretName": "nextstep-dev-appgw-password"
+        }
+      }	
+    }
+  }

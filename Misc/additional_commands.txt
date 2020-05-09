@@ -1,0 +1,16 @@
+
+
+
+
+
+
+openssl req -new -newkey rsa:2048 -nodes -out nextstep-dev.csr -keyout nextstep-dev.key
+openssl x509 -req -days 365 -in nextstep-dev.csr -signkey nextstep-dev.key -out nextstep-dev.crt
+openssl pkcs12 -export -out nextstep-dev.pfx -inkey nextstep-dev.key -in nextstep-dev.crt
+
+
+943c67ae-e997-4324-8873-cf874124b1d4
+uYpQ?-:UujPXydki:A7BMf0Et19q.OR-
+b8dc1204-b34d-4a1c-b6fa-6556662374f2
+665b6c62-7310-4d39-9abb-32a0cbc3b90f
+
