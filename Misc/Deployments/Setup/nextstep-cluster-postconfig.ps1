@@ -1,14 +1,14 @@
-param([Parameter(Mandatory=$false)] [string] $resourceGroup,
-        [Parameter(Mandatory=$false)] [string] $vnetResourceGroup,
-        [Parameter(Mandatory=$false)] [string] $clusterName,
-        [Parameter(Mandatory=$false)] [string] $acrName,
-        [Parameter(Mandatory=$false)] [string] $keyVaultName,
-        [Parameter(Mandatory=$false)] [string] $appgwName,
-        [Parameter(Mandatory=$false)] [string] $aksVNetName,
-        [Parameter(Mandatory=$false)] [string] $appgwSubnetName,
-        [Parameter(Mandatory=$false)] [string] $ingControllerIPAddress,
-        [Parameter(Mandatory=$false)] [string] $appgwTemplateFileName,
-        [Parameter(Mandatory=$false)] [string] $baseFolderPath)
+param([Parameter(Mandatory=$false)] [string] $resourceGroup = "AKSDev-rg",
+        [Parameter(Mandatory=$false)] [string] $vnetResourceGroup = "infraservices-nextstep-rg",
+        [Parameter(Mandatory=$false)] [string] $clusterName = "nextstep-dev-cluster",
+        [Parameter(Mandatory=$false)] [string] $acrName = "nxtstpacr",
+        [Parameter(Mandatory=$false)] [string] $keyVaultName = "nextstep-dev-kv",
+        [Parameter(Mandatory=$false)] [string] $appgwName = "nextstep-dev-appgw",
+        [Parameter(Mandatory=$false)] [string] $aksVNetName = "nextstep-vnet",
+        [Parameter(Mandatory=$false)] [string] $appgwSubnetName = "pvtsub-nextstep-appgw-subnet",
+        [Parameter(Mandatory=$false)] [string] $ingControllerIPAddress = "10.14.64.157",
+        [Parameter(Mandatory=$false)] [string] $appgwTemplateFileName = "nextstep-appgw-deploy",
+        [Parameter(Mandatory=$false)] [string] $baseFolderPath = "/Users/monojitdattams/Development/Projects/Workshops/Mphasis_Workshop/NextSTEP-POC/Deployments")
 
 
 $projectName = "nextstep-dev"

@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nextstep-dev-ingress
+  namespace: nextstep-dev-dev
+  annotations:    
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1 
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/enable-cors: "true"    
+spec:  
+  rules:    
+  - http:
+      paths:      
+      - path: /health/?(.*)
+        backend:
+          serviceName: elastic-service
+          servicePort: 9200
+      - path: /nginx/?(.*)
+        backend:
+          serviceName: nginx-service
+          servicePort: 80   

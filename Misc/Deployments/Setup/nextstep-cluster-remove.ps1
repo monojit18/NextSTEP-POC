@@ -1,11 +1,11 @@
-param([Parameter(Mandatory=$false)] [string] $resourceGroup,
-        [Parameter(Mandatory=$false)] [string] $clusterName,
-        [Parameter(Mandatory=$false)] [string] $acrName,
-        [Parameter(Mandatory=$false)] [string] $keyVaultName,
-        [Parameter(Mandatory=$false)] [string] $aksVNetName,
-        [Parameter(Mandatory=$false)] [string] $appgwName,
-        [Parameter(Mandatory=$false)] [string] $logWorkspaceName,
-        [Parameter(Mandatory=$false)] [string] $subscriptionId)
+param([Parameter(Mandatory=$false)] [string] $resourceGroup = "AKSDev-rg",        
+        [Parameter(Mandatory=$false)] [string] $clusterName = "nextstep-dev-cluster",        
+        [Parameter(Mandatory=$false)] [string] $acrName = "nxtstpacr",
+        [Parameter(Mandatory=$false)] [string] $keyVaultName = "nextstep-dev-kv",
+        [Parameter(Mandatory=$false)] [string] $aksVNetName = "nextstep-dev-vnet",        
+        [Parameter(Mandatory=$false)] [string] $appgwName = "nextstep-dev-appgw",
+        [Parameter(Mandatory=$false)] [string] $logWorkspaceName = "nextstep-dev-lw",
+        [Parameter(Mandatory=$false)] [string] $subscriptionId = "e5d4143d-aa29-4479-8588-405f723c89f5")
 
 $aksSPIdName = $clusterName + "-sp-id"
 $publicIpAddressName = "$appgwName-pip"

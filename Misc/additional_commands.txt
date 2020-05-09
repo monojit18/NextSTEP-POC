@@ -1,5 +1,38 @@
+// Ubuntu Self hosted agent config
+https://vstsagentpackage.azureedge.net/agent/2.166.3/vsts-agent-linux-x64-2.166.3.tar.gz
+curl https://vstsagentpackage.azureedge.net/agent/2.166.3/vsts-agent-linux-x64-2.166.3.tar.gz --output vsts-agent-linux-x64-2.166.3.tar.gz
+tar -xvf vsts-agent-linux-x64-2.166.3.tar.gz -C ../devops-agent/
+
+// PAT
+fo2rxnq4lbfiybtxikanipgrmbcqvazeudpucrkrho6y64f24uvq
+
+https://dev.azure.com/modattaLulu-Owner
+
+// SSH
+ssh devops-vm-ubuntu1804@13.71.95.9
 
 
+// docker 
+sudo snap install docker
+
+// azure-cli
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+// powershell
+sudo apt-get install -y powershell
+Install-Module -Name Az -AllowClobber
+
+// kubectl
+sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+
+// helm
+// helm
+sudo snap install helm (brew for mac)
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 
 
@@ -13,4 +46,6 @@ openssl pkcs12 -export -out nextstep-dev.pfx -inkey nextstep-dev.key -in nextste
 uYpQ?-:UujPXydki:A7BMf0Et19q.OR-
 b8dc1204-b34d-4a1c-b6fa-6556662374f2
 665b6c62-7310-4d39-9abb-32a0cbc3b90f
+
+k create secret docker-registry nextstep-dev-secret --docker-server=yomoneyacr.azurecr.io --docker-username=4970b794-92ca-4154-949c-8ace0b45d31a --docker-password=eba8687e-dc83-40b1-ad0c-44a1898da34b -n nextstep-dev-dev
 

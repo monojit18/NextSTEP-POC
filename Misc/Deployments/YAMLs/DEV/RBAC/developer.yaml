@@ -1,0 +1,25 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: nextstep-developer-roles
+  namespace: nextstep-dev-dev
+rules:
+- apiGroups: [""]
+  resources: ["configmaps", "pods", "deployments"]
+  verbs: ["get", "list", "watch"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: nextstep-developer-role-bindings
+  namespace: nextstep-dev-dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: nextstep-developer-roles
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  name: Chetan.C01@mphasis.com
+  kind: User
+  namespace: nextstep-dev-dev
