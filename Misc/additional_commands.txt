@@ -47,5 +47,6 @@ uYpQ?-:UujPXydki:A7BMf0Et19q.OR-
 b8dc1204-b34d-4a1c-b6fa-6556662374f2
 665b6c62-7310-4d39-9abb-32a0cbc3b90f
 
-k create secret docker-registry nextstep-dev-secret --docker-server=yomoneyacr.azurecr.io --docker-username=4970b794-92ca-4154-949c-8ace0b45d31a --docker-password=eba8687e-dc83-40b1-ad0c-44a1898da34b -n nextstep-dev-dev
+k create secret docker-registry nextstep-dev-dev-secret --docker-server=nxtstpacr.azurecr.io --docker-username=d7c1933c-c8ae-4835-83a8-cfb89bf89eba --docker-password=0a2ff499-3ead-4a91-9bd3-afdbaf02e111 -n nextstep-dev-dev
+docker login nxtstpacr.azurecr.io -u d7c1933c-c8ae-4835-83a8-cfb89bf89eba
 

@@ -4,7 +4,7 @@ metadata:
   name: nextstep-developer-roles
   namespace: nextstep-dev-dev
 rules:
-- apiGroups: [""]
+- apiGroups: ["", "apps"]
   resources: ["configmaps", "pods", "deployments"]
   verbs: ["get", "list", "watch"]
 
@@ -20,6 +20,6 @@ roleRef:
   name: nextstep-developer-roles
 subjects:
 - apiGroup: rbac.authorization.k8s.io
-  name: Chetan.C01@mphasis.com
+  name: harshitha.sikhakolli@mphasis.com
   kind: User
   namespace: nextstep-dev-dev

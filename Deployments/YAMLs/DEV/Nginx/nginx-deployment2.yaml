@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:    
-  name: nginx-deploy
-  namespace: nextstep-dev-dev
+  name: nginx-deploy  
 spec:
   replicas: 2
   selector:
@@ -14,7 +13,7 @@ spec:
         app: nginx-pod
     spec:
       containers:
-      - image: nxtstpacr.azurecr.io/nginx:latest
+      - image: nginx:latest
         imagePullPolicy: IfNotPresent
         name: nginx-app
         resources:
@@ -26,7 +25,7 @@ spec:
             memory: "256Mi"
         ports:
           - containerPort: 80
-      imagePullSecrets:
-      - name: nextstep-dev-dev-secret
+      # imagePullSecrets:
+      # - name: <secret_name>
       nodeSelector:        
-        agentpool: nextsteppool
+        agentpool: iotnodepool

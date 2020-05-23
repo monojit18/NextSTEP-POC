@@ -32,7 +32,7 @@ spec:
           serviceName: nextstep-mdcertui
           servicePort: 80
         path: /datacertui/?(.*)
-      - backend:
-          serviceName: nextstep-mdcertsvc
-          servicePort: 3002
-        path: /datacertsrv/?(.*)
+      # - backend:
+      #     serviceName: nextstep-mdcertsvc
+      #     servicePort: 3002
+      #   path: /datacertsrv/?(.*)
